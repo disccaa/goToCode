@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import Root from './App.vue';
 import urql from '@urql/vue';
+import components from '@/components/UI/index.js'
 
 
 import App from './App.vue'
@@ -14,5 +15,9 @@ app.use(urql, {
   
 app.use(createPinia())
 app.use(router)
+
+components.forEach(component => {
+  app.component(component.name, component)
+});
 
 app.mount('#app')
