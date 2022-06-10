@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg">
     <div class="mainBG">
       <div class="container">
         <div class="navBar flex">
@@ -25,6 +25,7 @@
          </h1>
 
         <my-button @click="dialogVisivle">Оставить заявку</my-button>
+        
         <my-dialog v-model:show="visiblDialog"></my-dialog>
       </div>
     </div>
@@ -48,12 +49,18 @@ export default {
 </script>
 
 <style scoped>
+* {
+  color:white;
+}
 .mainBG {
   background: url(@/assets/mainPage/MainPage.jpg);
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+}
+.bg {
+     background: rgb(248, 248, 248);
 }
 
 .navBar {
