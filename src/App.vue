@@ -1,26 +1,27 @@
 <template>
-
-<div>
-  <go-to-code-vue></go-to-code-vue>
-  <block-two v-bind:products="data" v-bind:host="host"></block-two>
-  <block-three></block-three>
-  <block-four></block-four>
-  <block-five></block-five>
-  <block-six></block-six>
-</div>
-
-
+  <div>
+    <go-to-code-vue></go-to-code-vue>
+    <!-- <block-two v-bind:products="data" v-bind:host="host"></block-two> -->
+    <block-three></block-three>
+    <block-four></block-four>
+    <block-five></block-five>
+    <block-six></block-six>
+    <block-seven></block-seven>
+    <block-eight></block-eight>
+  </div>
 </template>
 
 <script>
-import GoToCodeVue from './components/GoToCode.vue';
-import BlockTwo from './components/BlockTwo.vue';
-import BlockThree from './components/BlockThree.vue';
-import { useQuery } from '@urql/vue';
-import BlockFour from './components/BlockFour.vue';
-import BlockFive from './components/BlockFive.vue';
-import BlockSix from './components/BlockSix.vue';
-// import BlockThree from './components/BlockThree.vue';
+import GoToCodeVue from "./components/GoToCode.vue";
+import BlockTwo from "./components/BlockTwo.vue";
+import BlockThree from "./components/BlockThree.vue";
+import { useQuery } from "@urql/vue";
+import BlockFour from "./components/BlockFour.vue";
+import BlockFive from "./components/BlockFive.vue";
+import BlockSix from "./components/BlockSix.vue";
+import BlockSeven from "./components/BlockSeven.vue";
+import BlockEight from "./components/BlockEight.vue";
+
 export default {
   components: {
     GoToCodeVue,
@@ -28,7 +29,9 @@ export default {
     BlockThree,
     BlockFour,
     BlockFive,
-    BlockSix
+    BlockSix,
+    BlockSeven,
+    BlockEight
 },
 
   setup() {
@@ -43,21 +46,17 @@ export default {
   }
           } 
         }
-      `
-    
+      `,
     });
-    const host = 'http://localhost:8055/'
-    
+    const host = "http://localhost:8055/";
+
     return {
       fetching: result.fetching,
       data: result.data,
       error: result.error,
-      host
+      host,
     };
-  
-  }
-
- 
+  },
 };
 </script>
 
@@ -80,11 +79,11 @@ export default {
 .flex {
   display: flex;
 }
-.flex_wrap{
+.flex_wrap {
   flex-wrap: wrap;
 }
 .container-xl {
-   width: 1280px;
+  width: 1280px;
   margin: 0 auto;
 }
 ul {
@@ -94,16 +93,14 @@ ul {
 
 .blue {
   color: rgb(64, 64, 86);
-
 }
 .darck_blue {
   color: rgb(88, 69, 207);
 }
-.color_black{
-      color: rgb(64, 64, 86);
+.color_black {
+  color: rgb(64, 64, 86);
 }
 .color_grey {
   color: rgb(152, 152, 152);
 }
-
 </style>
