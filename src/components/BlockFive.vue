@@ -1,7 +1,7 @@
 <template>
   <div class="empty bg"></div>
   <div class="bg">
-    <div class="container">
+    <div class="container_castom">
       <my-line class="line"></my-line>
       <h2>Почему стоит выбрать <span class="darck_blue"> нас?</span></h2>
       <div class="flex left">

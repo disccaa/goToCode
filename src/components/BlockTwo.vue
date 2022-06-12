@@ -1,7 +1,7 @@
 <template>
 <div class="two"></div>
   <div class="bg">
-    <div class="container">
+    <div class="container_castom">
       <my-line class="line_block_two"></my-line>
       <h2>
         <span class="blue"> Попробуй себя в разных </span>

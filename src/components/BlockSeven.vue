@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container_castom">
     <div class="flex main">
       <div class="left">
         <p class="t_white">> $ npm install move.js</p>

@@ -1,6 +1,6 @@
 <template>
   <div class="bg">
-    <div class="container">
+    <div class="container_castom">
       <h2>Чему вы научитесь <span class="darck_blue"> с нами:</span></h2>
       <my-line class="line"></my-line>
       <div class="flex">

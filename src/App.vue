@@ -7,7 +7,8 @@
     <block-five></block-five>
     <block-six></block-six>
     <block-seven></block-seven>
-    <block-eight></block-eight>
+    <block-eight></block-eight> 
+    <test></test>
   </div>
 </template>
 
@@ -22,6 +23,8 @@ import BlockSix from "./components/BlockSix.vue";
 import BlockSeven from "./components/BlockSeven.vue";
 import BlockEight from "./components/BlockEight.vue";
 
+import Test from "./components/Test.vue";
+
 export default {
   components: {
     GoToCodeVue,
@@ -31,7 +34,8 @@ export default {
     BlockFive,
     BlockSix,
     BlockSeven,
-    BlockEight
+    BlockEight,
+    Test
 },
 
   setup() {
@@ -62,6 +66,7 @@ export default {
 
 <style>
 @import "./assets/css/tailwind.css";
+@import './index.css';
 * {
   margin: 0;
   padding: 0;
@@ -70,7 +75,7 @@ export default {
   /* color: white; */
 }
 
-.container {
+.container_castom{
   width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
@@ -82,7 +87,7 @@ export default {
 .flex_wrap {
   flex-wrap: wrap;
 }
-.container-xl {
+.container_castom-xl {
   width: 1280px;
   margin: 0 auto;
 }
