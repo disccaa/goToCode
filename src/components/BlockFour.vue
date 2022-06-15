@@ -1,6 +1,6 @@
 <template>
   <div class="padding">
-    <div class="container">
+    <div class="container_castom">
       <div class="content">
         <div class="flex">
           <div class="left half">

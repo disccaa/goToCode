@@ -1,7 +1,7 @@
 <template>
   <div class="bg">
     <div class="mainBG">
-      <div class="container">
+      <div class="container_castom">
         <div class="navBar flex">
           <div class="navBar_logo">
             <span class="s_logo">GoTo<span class="s_blue">Code</span></span>
@@ -14,18 +14,17 @@
             </ul>
           </div>
         </div>
-       
       </div>
-      <div class="container-xl">
-         <my-line class="main_line"></my-line>
-         <h1>
-Учись кодингу. <br>
-Войди в мир <br>
-современности. <br>
-         </h1>
+      <div class="container_castom-xl">
+        <my-line class="main_line"></my-line>
+        <h1>
+          Учись кодингу. <br />
+          Войди в мир <br />
+          современности. <br />
+        </h1>
 
         <my-button @click="dialogVisivle">Оставить заявку</my-button>
-        
+
         <my-dialog v-model:show="visiblDialog"></my-dialog>
       </div>
     </div>
@@ -33,7 +32,6 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -50,7 +48,7 @@ export default {
 
 <style scoped>
 * {
-  color:white;
+  color: white;
 }
 .mainBG {
   background: url(@/assets/mainPage/MainPage.jpg);
@@ -60,7 +58,7 @@ export default {
   height: 100vh;
 }
 .bg {
-     background: rgb(248, 248, 248);
+  background: rgb(248, 248, 248);
 }
 
 .navBar {
@@ -69,8 +67,7 @@ export default {
   padding-top: 3.25rem;
   padding-bottom: 3.25rem;
   margin-bottom: 7rem;
-    font-family: Inter-SemiBold;
-
+  font-family: Inter-SemiBold;
 }
 .s_logo {
   color: white;
@@ -86,7 +83,9 @@ export default {
   font-family: SF-Medium;
   margin-left: 1rem;
   padding-left: 0.75rem;
-  padding-right: 0.75rem;line-height: 1.375;    padding-top: 0.5rem;
+  padding-right: 0.75rem;
+  line-height: 1.375;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 1.2rem;
 }

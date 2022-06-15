@@ -1,7 +1,7 @@
 <template>
 <div class="two"></div>
   <div class="bg">
-    <div class="container">
+    <div class="container_castom">
       <my-line class="line_block_two"></my-line>
       <h2>
         <span class="blue"> Попробуй себя в разных </span>
@@ -10,7 +10,7 @@
       </h2>
       <div class="flex flex_wrap products">
         <div class="product" v-for="p in products.Products" :key="p.id">
-          <p><img :src="host + 'assets/' + p.img.id" alt="" /></p>
+          <div class="img flex "><img :src="host + 'assets/' + p.img.id" alt="" /></div>
           <p class="color_black p_title">{{ p.title }}</p>
           <p class="p_desc color_grey">{{ p.description }}</p>
 
@@ -82,5 +82,8 @@ gap: 1rem
 .two {
   height: 8rem;
   background: rgb(248, 248, 248);
+}
+div.img {
+ justify-content: center;
 }
 </style>

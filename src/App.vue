@@ -1,26 +1,35 @@
 <template>
   <div>
     <go-to-code-vue></go-to-code-vue>
-    <!-- <block-two v-bind:products="data" v-bind:host="host"></block-two> -->
+    <block-two v-bind:products="data" v-bind:host="host"></block-two>
     <block-three></block-three>
     <block-four></block-four>
     <block-five></block-five>
     <block-six></block-six>
     <block-seven></block-seven>
     <block-eight></block-eight>
+    <block-nine v-bind:program="data" v-bind:host="host"></block-nine>
+    <block-ten v-bind:acord="data"></block-ten>
+    <block-eleven></block-eleven>
+    <test></test>
   </div>
 </template>
 
 <script>
+import { useQuery } from "@urql/vue";
+
 import GoToCodeVue from "./components/GoToCode.vue";
 import BlockTwo from "./components/BlockTwo.vue";
 import BlockThree from "./components/BlockThree.vue";
-import { useQuery } from "@urql/vue";
 import BlockFour from "./components/BlockFour.vue";
 import BlockFive from "./components/BlockFive.vue";
 import BlockSix from "./components/BlockSix.vue";
 import BlockSeven from "./components/BlockSeven.vue";
 import BlockEight from "./components/BlockEight.vue";
+import BlockNine from "./components/BlockNine.vue";
+import Test from "./components/Test.vue";
+import BlockTen from "./components/BlockTen.vue";
+import BlockEleven from "./components/BlockEleven.vue";
 
 export default {
   components: {
@@ -31,21 +40,43 @@ export default {
     BlockFive,
     BlockSix,
     BlockSeven,
-    BlockEight
+    BlockEight,
+    Test,
+    BlockNine,
+    BlockTen,
+    BlockEleven
 },
 
   setup() {
     const result = useQuery({
       query: `
-        {
+           {
+           
           Products {
              title
             description
             img {
+                  id
+                }
+          } 
+  	Program {
+      title
+      desc
+      img {
+                  id
+                }
+      
+    }
+    
+  Acordion {
+    head
+    body
     id
   }
-          } 
-        }
+}
+          
+        
+        
       `,
     });
     const host = "http://localhost:8055/";
@@ -62,6 +93,7 @@ export default {
 
 <style>
 @import "./assets/css/tailwind.css";
+@import "./index.css";
 * {
   margin: 0;
   padding: 0;
@@ -70,7 +102,7 @@ export default {
   /* color: white; */
 }
 
-.container {
+.container_castom {
   width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
@@ -82,7 +114,7 @@ export default {
 .flex_wrap {
   flex-wrap: wrap;
 }
-.container-xl {
+.container_castom-xl {
   width: 1280px;
   margin: 0 auto;
 }
